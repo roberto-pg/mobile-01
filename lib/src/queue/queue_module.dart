@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:provider/provider.dart';
+import 'package:queue/src/configuration/stores/conf_store.dart';
 import 'package:queue/src/queue/domain/repositories/queue_repository.dart';
 import 'package:queue/src/queue/domain/usecases/get_all_queues.dart';
 import 'package:queue/src/queue/external/queue_firestore_datasource.dart';
@@ -14,4 +15,5 @@ final queueModule = [
       create: (context) => QueueRepository(datasource: context.read())),
   Provider<IGetAllQueues>(
       create: (context) => GetAllQueues(repository: context.read())),
+  Provider<ConfStore>(create: (context) => ConfStore(getAllQueuesUsecase: context.read()))
 ];
