@@ -1,9 +1,9 @@
-import 'package:queue/src/queue/domain/entities/queue_entity.dart';
+// import 'package:queue/src/queue/domain/entities/queue_entity.dart';
 
-abstract class ConfEvent {}
+// abstract class ConfEvent {}
 
-class AddQueues implements ConfEvent {
-  final List<QueueEntity> queues;
+// class AddQueues implements ConfEvent {
+//   final List<QueueEntity> queues;
 
-  AddQueues(this.queues);
-}
+//   AddQueues(this.queues);
+// }

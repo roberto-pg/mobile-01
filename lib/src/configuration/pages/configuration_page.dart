@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_triple/flutter_triple.dart';
 import 'package:provider/provider.dart';
-import 'package:queue/src/configuration/states/conf_state.dart';
 import 'package:queue/src/configuration/stores/conf_store.dart';
 import 'package:queue/src/queue/domain/entities/queue_entity.dart';
 
@@ -42,22 +41,21 @@ class _ConfigurationPageState extends State<ConfigurationPage> {
                       ),
                     ],
                   ),
-                  if (state is LoadedConfState)
-                    ListView.builder(
-                      shrinkWrap: true,
-                      itemCount: state.length,
-                      itemBuilder: (context, index) {
-                        final queue = state[index];
-                        return ListTile(
-                          title: Text('${queue.title} - ${queue.abbreviation}'),
-                          subtitle: Text('${queue.priority} de prioridade'),
-                          trailing: const Icon(
-                            Icons.remove,
-                            color: Colors.redAccent,
-                          ),
-                        );
-                      },
-                    ),
+                  ListView.builder(
+                    shrinkWrap: true,
+                    itemCount: state.length,
+                    itemBuilder: (context, index) {
+                      final queue = state[index];
+                      return ListTile(
+                        title: Text('${queue.title} - ${queue.abbreviation}'),
+                        subtitle: Text('${queue.priority} de prioridade'),
+                        trailing: const Icon(
+                          Icons.remove,
+                          color: Colors.redAccent,
+                        ),
+                      );
+                    },
+                  ),
                   const SizedBox(height: 10),
                   const Text('CONTROLE'),
                   const SizedBox(height: 10),
