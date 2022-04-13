@@ -25,4 +25,27 @@ void main() {
     expect(queue.priority, 1);
     expect(queue.orders.first.status, OrderStatus.attending);
   });
+
+  test('deve converter QueueEntity em Map', () {
+    final order = Order(
+      id: 'dkjfflsdl',
+      position: 1,
+      timestamp: DateTime.now(),
+      status: OrderStatus.waiting,
+    );
+
+    final queue = QueueEntity(
+      id: 'kfdsala',
+      title: 'title',
+      abbreviation: 'abbreviation',
+      priority: 1,
+      orders: [order],
+    );
+
+    final map = JsonToQueue.toMap(queue);
+
+    expect(map['id'], 'kfdsala');
+    expect(map['title'], 'title');
+    expect(map['orders'][0]['status'], 'waiting');
+  });
 }

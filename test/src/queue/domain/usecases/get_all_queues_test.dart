@@ -12,7 +12,7 @@ void main() {
     when(() => repository.getAllQueues())
         .thenAnswer((_) => Stream.value([entity]));
 
-    final usecase = GetAllQueues(repository: repository);
+    final usecase = GetAllQueuesUseCase(repository: repository);
 
     final result = usecase.call();
 
