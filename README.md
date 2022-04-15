@@ -1,16 +1,7 @@
-# queue
+## Repository for study and tests
+<br/>
 
-A new Flutter project.
+All About Firebase - Full App
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Thanks to:
+[Jacob Moura](https://www.youtube.com/watch?v=cWdGy0EtpI4&list=PLlBnICoI-g-fN96Bz1v7343x2pmx_0RGH)
