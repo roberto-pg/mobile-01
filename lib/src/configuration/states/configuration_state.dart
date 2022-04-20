@@ -2,7 +2,7 @@ import 'package:queue/src/queue/domain/entities/queue_entity.dart';
 
 abstract class ConfigurationState {}
 
-class EmptyConfigurationState extends ConfigurationState {}
+class InitialConfigurationState extends ConfigurationState {}
 
 class LoadingConfigurationState extends ConfigurationState {}
 
