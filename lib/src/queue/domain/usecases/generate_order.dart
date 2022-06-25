@@ -1,4 +1,3 @@
-import 'package:queue/src/checkin/events/checkin_event.dart';
 import 'package:queue/src/queue/domain/entities/queue_entity.dart';
 import 'package:queue/src/queue/domain/value_objects/order.dart';
 
